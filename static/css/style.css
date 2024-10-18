@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navigation-bar{
+    border-bottom: 1px  solid gainsboro;
+}
+/* First Navigation */
+#first-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding:10px;
+}
+.first-child{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+#first-nav a{
+    text-decoration: none;
+    color:dimgrey;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Second Navigation */
+#second-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding:25px;
+}
+#second-nav a{
+    text-decoration: none;
+    color:#0071bc;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+#second-nav img:first-child{
+    height: 40px;
+}
+#second-nav i,
+#second-nav img{
+    cursor: pointer;
+}
+.second-child{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.second-child img{
+    background-color:#df3416;
+    height: 35px;
+    box-sizing: border-box;
+}
+.second-child i{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color:#df3416;
+}
+#hidden-child{
+    display: none;
+    align-items: center;
+    column-gap: 20px;
+}
+#hidden-child a{
+    text-decoration: none;
+    color:dimgrey;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+#hidden-child i{
+    font-size: 1.8rem;
+}
+
+.offcanvas-body li{
+    margin-bottom: 10px;
+    padding:5px;
+}
+.offcanvas-body li:hover{
+    background-color: lightblue;
+}
+@media screen and (max-width:1220px) {
+    #second-nav .nav-right{
+        display:none;
+    }
+}
+@media screen and (max-width:1200px) {
+    #second-nav .second-child{
+        display:none;
+    }
+    #first-nav{
+        display: none;
+    }
+    #hidden-child{
+        display: flex;
+    }
+}
+@media screen and (max-width:525px) {
+    .hide-me{
+        display: none;
+    }
+    .form-field input{
+        width: 100%;
+    }
+}
+
+/* ---------------> Form Field <--------------- */
+form.form-field{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.form-field label{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.form-field input{
+    width: 50%;
+    padding:10px;
+    border: none;
+    outline: none;
+    border: 1px solid cadetblue;
+    margin-bottom: 20px;
+}
+.form-field .phone-num,.email-id,.zip-code,.bank-name,.acc-num{
+    display: none;
+}
+.form-field button{
+    margin-bottom: 20px;
+}
