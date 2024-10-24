@@ -12,17 +12,26 @@
     align-items: center;
     height: 30px;
     padding:10px;
+    background-color: #f5f5f5;
 }
-.first-child{
+.f-first-child a:first-child{
+    border-bottom: 2px solid black;
+}
+.first-child,.f-first-child{
     display: flex;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 25px;
 }
 #first-nav a{
     text-decoration: none;
-    color:dimgrey;
-    font-size: 0.8rem;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
     font-weight: 500;
+    border-bottom: 2px solid #f5f5f5;
+}
+#first-nav a:hover{
+    border-bottom: 2px solid black;
 }
 
 /* Second Navigation */
@@ -40,7 +49,7 @@
     font-size: 0.9rem;
 }
 #second-nav img:first-child{
-    height: 40px;
+    height: 32px;
 }
 #second-nav i,
 #second-nav img{
@@ -58,13 +67,30 @@
 }
 .second-child i{
     font-size: 1.2rem;
-    font-weight: 900;
-    color:#df3416;
+    font-weight: 500;
+    color:dimgray;
 }
+
+/* Third Navigation */
+#third-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:10px;
+    column-gap: 25px;
+}
+#third-nav a{
+    font-size: 1.2rem;
+}
+#third-nav a:hover{
+    text-decoration: underline;
+}
+/* Hidden Nav */
 #hidden-child{
     display: none;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 10px;
+    color:red;
 }
 #hidden-child a{
     text-decoration: none;
@@ -83,21 +109,21 @@
 .offcanvas-body li:hover{
     background-color: lightblue;
 }
-@media screen and (max-width:1220px) {
+/* @media screen and (max-width:1220px) {
     #second-nav .nav-right{
         display:none;
     }
-}
+} */
 @media screen and (max-width:1200px) {
-    #second-nav .second-child{
+    /* #second-nav .second-child{
         display:none;
-    }
+    } */
     #first-nav{
         display: none;
     }
-    #hidden-child{
+    /* #hidden-child{
         display: flex;
-    }
+    } */
 }
 @media screen and (max-width:525px) {
     .hide-me{
@@ -106,6 +132,20 @@
     .form-field input{
         width: 100%;
     }
+}
+@media screen and (max-width:1080px){
+    
+    /* Third Navigation */
+    #third-nav{
+        display: none;
+    }
+    #hidden-child{
+        display: flex;
+    }
+    #second-nav .second-child{
+        display:none;
+    }
+    
 }
 
 /* ---------------> Form Field <--------------- */
